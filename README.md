@@ -1,38 +1,48 @@
+# SOCKET PROGRAMMING
 There are four parts corresponding to section 2.
 To execute, open the terminal and go to a specific directory.
 
 
-Part 1 :
+### Part 1 :
 How to run ?
 Go to part1 directory and open terminal in that directory.
-Run python server.py
+```bash
+python server.py
+```
 Enter port number(e.g. 1024)
 
 Open another terminal in the same location.
-Run python client.py
+```bash
+python client.py
+```
 Enter the hostname of server and port number to which server is listening.
 (e.g. hostname = StarkHUB, port = 1024)
 Enter username and password.
 
 
-Part 2 :
+### Part 2 :
 This program allows multiple clients to feature.
 I have implemented it using threads.
 
 How to run ?
 Go to part2 directory and open terminal in that directory.
-Run python server.py
+```bash
+python server.py
+```
 Enter port number(e.g. 1024)
 
 Open two terminals in the same location.
 Run python client.py in both.
+```bash
+python client.py
+```
 (Enter the following data in any order.)
 Enter the hostname of server and port number to which server is listening.
 (e.g. hostname = StarkHUB, port = 1024)
 Enter username and password.
 
 
-Part 3 :
+### Part 3 :
 This program allows the client and server programs at two different machines.
 Assumption : Server will be hosted on wifi network. Client will connect to the IP of the server.
 e.g. IP = '172.21.5.133' : Wifi IP of my laptop
@@ -48,7 +58,9 @@ Bandwidth = data/avg-RTT i.e. nearly 13 MBps
 
 How to run ?
 Go to part3 directory and open terminal in that directory.
-Run python server.py
+```bash
+python server.py
+```
 Enter port number(e.g. 1024)
 
 Open another terminal in the same location on another machine.
@@ -58,7 +70,7 @@ Enter hostname of server and port number to which the server is listening.
 Enter username and password.
 
 
-Part 4 :
+### Part 4 :
 Assumption 1 : IP and port of host A,B,C,D are defined at the top in their files.
 If we are changing StarkHUB.rtl file then we need to manually change IP and port at the top.
 Assumption 2 : Exclusive access means only access to some people that is whose attendance > 80%. 
@@ -74,17 +86,23 @@ To calculate percentage run python calculate_attendance.py
 It will store username, percentage in attendance_percentage.csv
 
 Now run in terminal run on same/different machines :
+```bash
 python host_a.py
 python host_b.py
 python host_c.py
 python host_d.py
+````
 
 After that, open another terminal in the same location on the same/another machine.
-Run python server.py
+```bash
+python server.py
+```
 Enter port number(e.g. 1024)
 
 Open another terminal in the same location on the same/another machine.
-Run python client.py
+```bash
+python client.py
+```
 Enter the hostname of server and port number to which server is listening.
 (e.g. hostname = 172.21.5.133, port = 1024)
 Enter username and password.
